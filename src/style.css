@@ -1,36 +1,37 @@
 * {
-padding: 0;
-margin: 0;
-border-radius: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
 }
 
 body {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .p-head {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-    background-color:beige ;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: beige;
 }
 
-.p-head > a{
-    color: black;
-    cursor: pointer;
+.p-head > a {
+  color: black;
+  cursor: pointer;
 }
 
-.active{
-    font-weight: 600;
+.active {
+  font-weight: 600;
 }
 
-.logo-img{
-    text-decoration: none;
+.logo-img {
+  text-decoration: none;
 }
 
 .item2 {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .item3 {
-    text-decoration: none;
+  text-decoration: none;
 }
