@@ -13,6 +13,7 @@ body {
   justify-content: space-around;
   padding: 2rem;
   background-color: beige;
+  /* width: 100%; */
 }
 
 .p-head > a {
@@ -25,7 +26,7 @@ body {
 }
 
 .logo-img {
-  text-decoration: none;
+  height: auto;
 }
 
 .item2 {
@@ -35,6 +36,44 @@ body {
 .item3 {
   text-decoration: none;
 }
+
+.p-content {
+  background-color: rgb(209, 117, 117);
+  width: 100%; 
+}
+.row-one {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.col-one{
+  flex: 30%;
+}
+
+.item-wrapper {
+  padding: 1rem;
+}
+
+.food-img1{
+  width: 100%;
+}
+.fname-likes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+}
+ .like-btn {
+  border: 0;
+
+ }
+.comment {
+  text-align: center;
+}
+
 
 .footer-text {
   text-align: center;
