@@ -24,7 +24,7 @@ const renderContent = (item) => {
 };
 
 fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
-  .then(response => response.json())
+  .then((response) => response.json())
   .then((response) => {
     const data = response.meals;
     data.forEach((item) => {
