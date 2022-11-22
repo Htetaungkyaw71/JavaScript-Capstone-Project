@@ -1,4 +1,9 @@
 // import _ from 'lodash';
+import comment from './modules/comment.js';
+
+const mainapi = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
+
+const dialog = document.getElementById('dialog');
 const divContainer = document.querySelector('.row-one');
 
 const renderContent = (item) => {
@@ -17,17 +22,27 @@ const renderContent = (item) => {
   </div>
 
   <div class="comment">
-      <button type="button">Comments</button>
+      <button type="button" class="btn" id="${item.idMeal}">Comments</button>
   </div>
   </div>`;
   divContainer.append(divElement);
 };
 
-fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
-  .then((response) => response.json())
-  .then((response) => {
-    const data = response.meals;
-    data.forEach((item) => {
-      renderContent(item);
+// View detail
+
+document.addEventListener('DOMContentLoaded', () => {
+  dialog.classList.add('hidden');
+  fetch(mainapi)
+    .then((response) => response.json())
+    .then((response) => {
+      const data = response.meals;
+      data.forEach((item) => {
+        renderContent(item);
+        comment();
+      });
     });
-  });
+
+  // fetchInvo().then(data=>{
+  //     updatedLike(data)
+  // })
+});
