@@ -7,6 +7,9 @@ export const like = async () => {
     icon.addEventListener('click', async () => {
       const { id } = icon;
       postLike(id);
+      let count = +icon.nextElementSibling.innerHTML;
+      count += 1;
+      icon.nextElementSibling.innerHTML = count;
     });
   });
 };
