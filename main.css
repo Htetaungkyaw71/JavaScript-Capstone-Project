@@ -16,8 +16,6 @@ body {
   justify-content: space-around;
   padding: 2rem;
   background-color: beige;
-
-  /* width: 100%; */
 }
 
 .p-head > a {
