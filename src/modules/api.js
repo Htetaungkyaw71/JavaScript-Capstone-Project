@@ -33,3 +33,21 @@ export const postComment = async (data) => {
   }
   return true;
 };
+
+export const postLike = (id) => {
+  fetch(`${invo}${key}/likes`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: id,
+    }),
+  });
+};
+
+export const getLikes = async () => {
+  const response = await fetch(`${invo}${key}/likes`);
+  const data = await response.json();
+  return data;
+};
