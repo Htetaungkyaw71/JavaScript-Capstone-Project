@@ -1,6 +1,6 @@
 // import _ from 'lodash';
 import comment from './modules/comment.js';
-import {like, renderLike} from './modules/like.js';
+import { like, renderLike } from './modules/like.js';
 import dispCounter from './modules/itemCount.js';
 
 const mainapi = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     .then((response) => {
       const data = response.meals;
       const list = data.slice(0, 6);
-    dispCounter(list.length);
+      dispCounter(list.length);
 
       list.forEach((item) => {
         renderContent(item);
@@ -46,9 +46,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderLike(item.idMeal);
       });
       like();
-    });  
+    });
 });
-
-
-
-

@@ -1,3 +1,4 @@
+"use strict";
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * This devtool is neither made for production nor for readable output files.
@@ -6,9 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
+(self["webpackChunkwebpack_demo"] = self["webpackChunkwebpack_demo"] || []).push([["main"],{
 
 /***/ "./src/style.css":
 /*!***********************!*\
@@ -26,7 +25,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_comment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/comment.js */ \"./src/modules/comment.js\");\n/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ \"./src/modules/api.js\");\n/* harmony import */ var _modules_itemCount_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/itemCount.js */ \"./src/modules/itemCount.js\");\n// import _ from 'lodash';\n\n\n\n// import like from './modules/like.js';\nconst invo = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';\nconst key = 'fPYwNXOHCbzOe8GPrdwI';\n\nconst mainapi = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';\n\nconst dialog = document.getElementById('dialog');\nconst divContainer = document.querySelector('.row-one');\n\nconst renderContent = (item) => {\n  const divElement = document.createElement('div');\n  divElement.className = 'col-one';\n  divElement.innerHTML = `<div class=\"item-wrapper\">\n  <div class=\"food-img\">\n      <img src=\"${item.strMealThumb}\" alt=\"\" class=\"food-img1\"> \n  </div>\n  <div class=\"fname-likes\">\n      <h2>${item.strMeal}</h2>\n     <span class=\"likes\">\n      <button class=\"like-btn\" id= \"${item.idMeal}\"><i class=\"fa-regular fa-heart\"></i></button>  \n       <p class= \"num-likes\" id = \"likes${item.idMeal}\" > </p>\n      </span>\n  </div>\n\n  <div class=\"comment\">\n      <button type=\"button\" class=\"btn\" id=\"${item.idMeal}\">Comments</button>\n  </div>\n  </div>`;\n  divContainer.append(divElement);\n};\n\n\n// const getLikes = async (id) => {\n//   const response = await fetch(`${invo}${key}/likes`)\n//     .then((response) => response.json())\n//     .then((data) => {\n//       console.log(data);\n   \n//       data.forEach((like) => {\n//         if(like.item_id === id){\n//         // const renderLike = document.querySelectorAll('.num-likes');\n\n//         // renderLike.innerHTML =`${like.likes}`\n//         }\n//       })\n//     });\n// };\n\n// //Like Icon\n// const like = async () => {\n//   const likeBtn = document.querySelectorAll('.like-btn');\n//   likeBtn.forEach((icon) => {\n//     icon.addEventListener('click', async () => {  \n//       const id = icon.id\n//       fetch(`${invo}${key}/likes`, {\n//         method: 'POST',\n//         headers: {\n//           'Content-Type': 'application/json',\n//         },\n//         body: JSON.stringify({\n//           'item_id':id,\n//         }),\n//       });\n//    getLikes(id)\n//     });\n//   })\n// }\n// like();\n\n\n// const getLikes = async () => {\n//   const response = await fetch(`${invo}${key}/likes`)\n//     .then((response) => response.json())\n//     .then((data) => {\n//       // console.log(data);\n//       return data;\n//       // const dispLikes = document.querySelectorAll('.num-likes');\n//       // dispLikes.forEach((like) => {\n    \n//       // });\n//     });\n// };\n\n\n\n// View detail\n\ndocument.addEventListener('DOMContentLoaded', async () => {\n  dialog.classList.add('hidden');\n\n  // console.log(likes)\n  fetch(mainapi)\n    .then((response) => response.json())\n    .then((response) => {\n      const data = response.meals;\n      const list = data.slice(0, 6);\n    (0,_modules_itemCount_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(list.length);\n\n      list.forEach((item) => {\n        renderContent(item);\n        (0,_modules_comment_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n        renderLike(item.idMeal);\n      });\n    like();\n    });  \n});\n\n\n\n\n//Like Icon\nconst like = async (id) => {\n  const likeBtn = document.querySelectorAll('.like-btn');\n  likeBtn.forEach((icon) => {\n    icon.addEventListener('click', async () => {  \n      const id = icon.id\n        ;(0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__.postLike)(id); \n    });\n  })\n\n}\n// like();\n\nconst renderLike = async (id) => {\n  const likes = await (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__.getLikes)(); \n  likes.forEach((like) => {\n    if (like.item_id === id){\n      document.getElementById(`likes${id}`).innerHTML = like.likes;\n    } \n  })\n  document.querySelectorAll('.num-likes').forEach ((element)=>{\n    if (element.innerHTML == \" \"){\n      element.innerHTML = 0;\n    }\n  })\n}\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_comment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/comment.js */ \"./src/modules/comment.js\");\n/* harmony import */ var _modules_like_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/like.js */ \"./src/modules/like.js\");\n/* harmony import */ var _modules_itemCount_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/itemCount.js */ \"./src/modules/itemCount.js\");\n// import _ from 'lodash';\n\n\n\n\nconst mainapi = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';\n\nconst dialog = document.getElementById('dialog');\nconst divContainer = document.querySelector('.row-one');\n\nconst renderContent = (item) => {\n  const divElement = document.createElement('div');\n  divElement.className = 'col-one';\n  divElement.innerHTML = `<div class=\"item-wrapper\">\n  <div class=\"food-img\">\n      <img src=\"${item.strMealThumb}\" alt=\"\" class=\"food-img1\"> \n  </div>\n  <div class=\"fname-likes\">\n      <h2>${item.strMeal}</h2>\n     <span class=\"likes\">\n      <button class=\"like-btn\" id= \"${item.idMeal}\"><i class=\"fa-regular fa-heart\"></i></button>  \n       <p class= \"num-likes\" id = \"likes${item.idMeal}\" > </p>\n      </span>\n  </div>\n\n  <div class=\"comment\">\n      <button type=\"button\" class=\"btn\" id=\"${item.idMeal}\">Comments</button>\n  </div>\n  </div>`;\n  divContainer.append(divElement);\n};\n\n// View detail\ndocument.addEventListener('DOMContentLoaded', async () => {\n  dialog.classList.add('hidden');\n  fetch(mainapi)\n    .then((response) => response.json())\n    .then((response) => {\n      const data = response.meals;\n      const list = data.slice(0, 6);\n      (0,_modules_itemCount_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(list.length);\n\n      list.forEach((item) => {\n        renderContent(item);\n        (0,_modules_comment_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n        (0,_modules_like_js__WEBPACK_IMPORTED_MODULE_1__.renderLike)(item.idMeal);\n      });\n      (0,_modules_like_js__WEBPACK_IMPORTED_MODULE_1__.like)();\n    });\n});\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
@@ -36,7 +35,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"fetchComment\": () => (/* binding */ fetchComment),\n/* harmony export */   \"fetchDataDeatil\": () => (/* binding */ fetchDataDeatil),\n/* harmony export */   \"getLikes\": () => (/* binding */ getLikes),\n/* harmony export */   \"postComment\": () => (/* binding */ postComment),\n/* harmony export */   \"postLike\": () => (/* binding */ postLike)\n/* harmony export */ });\n/* eslint-disable no-console */\nconst detailapi = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';\nconst invo = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';\nconst key = 'fPYwNXOHCbzOe8GPrdwI';\n\nconst fetchDataDeatil = async (id) => {\n  const response = await fetch(`${detailapi}${id}`);\n  const data = await response.json();\n  return data.meals[0];\n};\n\nconst fetchComment = async (id) => {\n  const response = await fetch(`${invo}${key}/comments?item_id=${id}`);\n  if (response.status !== 200) {\n    console.clear();\n    return null;\n  }\n  const data = await response.json();\n  return data;\n};\n\nconst postComment = async (data) => {\n  const response = await fetch(`${invo}${key}/comments`, {\n    method: 'POST',\n    body: JSON.stringify(data),\n    headers: {\n      'Content-Type': 'application/json',\n    },\n\n  });\n  if (response.status !== 201) {\n    return null;\n  }\n  return true;\n};\n\n\nconst postLike = async (id) =>{\nconst response = await fetch(`${invo}${key}/likes`, {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n        },\n        body: JSON.stringify({\n          'item_id':id,\n        }),\n      });\n    };\n\n\n   const getLikes = async (id) => {\n      const response = await fetch(`${invo}${key}/likes`)\n      const data = await response.json();\n      return data;\n        \n    };\n\n//# sourceURL=webpack://webpack-demo/./src/modules/api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"fetchComment\": () => (/* binding */ fetchComment),\n/* harmony export */   \"fetchDataDeatil\": () => (/* binding */ fetchDataDeatil),\n/* harmony export */   \"getLikes\": () => (/* binding */ getLikes),\n/* harmony export */   \"postComment\": () => (/* binding */ postComment),\n/* harmony export */   \"postLike\": () => (/* binding */ postLike)\n/* harmony export */ });\n/* eslint-disable no-console */\nconst detailapi = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';\nconst invo = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';\nconst key = 'fPYwNXOHCbzOe8GPrdwI';\n\nconst fetchDataDeatil = async (id) => {\n  const response = await fetch(`${detailapi}${id}`);\n  const data = await response.json();\n  return data.meals[0];\n};\n\nconst fetchComment = async (id) => {\n  const response = await fetch(`${invo}${key}/comments?item_id=${id}`);\n  if (response.status !== 200) {\n    console.clear();\n    return null;\n  }\n  const data = await response.json();\n  return data;\n};\n\nconst postComment = async (data) => {\n  const response = await fetch(`${invo}${key}/comments`, {\n    method: 'POST',\n    body: JSON.stringify(data),\n    headers: {\n      'Content-Type': 'application/json',\n    },\n\n  });\n  if (response.status !== 201) {\n    return null;\n  }\n  return true;\n};\n\nconst postLike = (id) => {\n  fetch(`${invo}${key}/likes`, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify({\n      item_id: id,\n    }),\n  });\n};\n\nconst getLikes = async () => {\n  const response = await fetch(`${invo}${key}/likes`);\n  const data = await response.json();\n  return data;\n};\n\n//# sourceURL=webpack://webpack-demo/./src/modules/api.js?");
 
 /***/ }),
 
@@ -56,72 +55,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst dispCounter = (count) => {\n    const movieUpdate = document.getElementById('movies-count');\n    movieUpdate.innerHTML = `Movies(${count})`;\n  };\n  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dispCounter);\n\n//# sourceURL=webpack://webpack-demo/./src/modules/itemCount.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst dispCounter = (count) => {\n  const movieUpdate = document.getElementById('menu-count');\n  movieUpdate.innerHTML = `Menu(${count})`;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dispCounter);\n\n//# sourceURL=webpack://webpack-demo/./src/modules/itemCount.js?");
+
+/***/ }),
+
+/***/ "./src/modules/like.js":
+/*!*****************************!*\
+  !*** ./src/modules/like.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"like\": () => (/* binding */ like),\n/* harmony export */   \"renderLike\": () => (/* binding */ renderLike)\n/* harmony export */ });\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/modules/api.js\");\n\n\n// Post like function\nconst like = async () => {\n  const likeBtn = document.querySelectorAll('.like-btn');\n  likeBtn.forEach((icon) => {\n    icon.addEventListener('click', async () => {\n      const { id } = icon;\n      (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.postLike)(id);\n    });\n  });\n};\n\n// render like function\nconst renderLike = async (id) => {\n  const likes = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.getLikes)();\n  likes.forEach((like) => {\n    if (like.item_id === id) {\n      document.getElementById(`likes${id}`).innerHTML = like.likes;\n    }\n  });\n  document.querySelectorAll('.num-likes').forEach((element) => {\n    if (element.innerHTML === ' ') {\n      element.innerHTML = 0;\n    }\n  });\n};\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/like.js?");
 
 /***/ })
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	__webpack_require__("./src/index.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/style.css");
-/******/ 	
-/******/ })()
-;
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exports__ = (__webpack_exec__("./src/index.js"), __webpack_exec__("./src/style.css"));
+/******/ }
+]);
