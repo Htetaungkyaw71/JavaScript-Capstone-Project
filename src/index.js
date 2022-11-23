@@ -1,5 +1,7 @@
 // import _ from 'lodash';
 import comment from './modules/comment.js';
+import {like, renderLike} from './modules/like.js';
+import dispCounter from './modules/itemCount.js';
 
 const mainapi = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 
@@ -16,8 +18,8 @@ const renderContent = (item) => {
   <div class="fname-likes">
       <h2>${item.strMeal}</h2>
      <span class="likes">
-      <button class="like-btn"><i class="fa-regular fa-heart"></i></button>  
-       <p>5 Likes</p>
+      <button class="like-btn" id= "${item.idMeal}"><i class="fa-regular fa-heart"></i></button>  
+       <p class= "num-likes" id = "likes${item.idMeal}" > </p>
       </span>
   </div>
 
@@ -29,20 +31,24 @@ const renderContent = (item) => {
 };
 
 // View detail
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   dialog.classList.add('hidden');
   fetch(mainapi)
     .then((response) => response.json())
     .then((response) => {
       const data = response.meals;
-      data.forEach((item) => {
+      const list = data.slice(0, 6);
+    dispCounter(list.length);
+
+      list.forEach((item) => {
         renderContent(item);
         comment();
+        renderLike(item.idMeal);
       });
-    });
-
-  // fetchInvo().then(data=>{
-  //     updatedLike(data)
-  // })
+      like();
+    });  
 });
+
+
+
+
