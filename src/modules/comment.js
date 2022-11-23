@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import { fetchDataDeatil, fetchComment, postComment } from './api.js';
+import { counter,cmCount } from './CommentCount.js';
 
 const dialog = document.getElementById('dialog');
 
@@ -45,7 +46,9 @@ const renderDetail = (data) => {
             </form>
             <hr>
             <div>
-                <h2 class="comments">Comments</h2>
+                  <h2 class="comments">Comments
+                (<span id="commentCounter"></span>)
+                </h2>
                 <ul class="commentList">
                 
                 </ul>
@@ -98,6 +101,7 @@ const addComment = (id) => {
     renderComment({ ...data, creation_date: today });
     e.target.name.value = '';
     e.target.insight.value = '';
+    cmCount()
   };
 };
 
@@ -114,8 +118,10 @@ export default () => {
         fetchComment(btn.id).then((data) => {
           if (data) {
             data.forEach((item) => renderComment(item));
+            counter(data)
           } else {
             document.querySelector('.commentList').innerHTML = '<li>No Comments</li>';
+            counter(null)
           }
         });
       });
