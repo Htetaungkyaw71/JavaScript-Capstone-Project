@@ -1,5 +1,7 @@
-// import _ from 'lodash';
 import comment from './modules/comment.js';
+import festus from './img/festus.jpg';
+import htet from './img/htet.jpg';
+import logo from './img/seafood-log.jpg';
 import { like, renderLike } from './modules/like.js';
 import dispCounter from './modules/itemCount.js';
 
@@ -18,26 +20,27 @@ const renderContent = (item) => {
   <div class="fname-likes">
       <h2>${item.strMeal}</h2>
      <span class="likes">
-      <button class="like-btn" id= "${item.idMeal}"><i class="fa-regular fa-heart"></i></button>  
-       <p class= "num-likes" id = "likes${item.idMeal}" > </p>
+     <p class= "num-likes" id = "likes${item.idMeal}" > </p>
+      <button class="like-btn" id= "${item.idMeal}">
+      <i class="fa-regular fa-heart"></i>
+      </button>  
+
       </span>
   </div>
-
   <div class="comment">
-      <button type="button" class="btn" id="${item.idMeal}">Comments</button>
+      <button type="button" class="btn" id="${item.idMeal}">View</button>
   </div>
   </div>`;
   divContainer.append(divElement);
 };
 
-// View detail
 document.addEventListener('DOMContentLoaded', async () => {
   dialog.classList.add('hidden');
   fetch(mainapi)
     .then((response) => response.json())
     .then((response) => {
       const data = response.meals;
-      const list = data.slice(0, 6);
+      const list = data.slice(1, 7);
       dispCounter(list.length);
 
       list.forEach((item) => {
@@ -47,4 +50,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
       like();
     });
+
+  const img = document.createElement('img');
+  const a = document.createElement('a');
+  a.href = 'https://github.com/Htetaungkyaw71';
+  img.className = 'author';
+  img.src = htet;
+  a.append(img);
+
+  const img1 = document.createElement('img');
+  const a1 = document.createElement('a');
+  a1.href = 'https://github.com/Enning94';
+  img1.className = 'author';
+  img1.src = festus;
+  a1.append(img1);
+
+  document.querySelector('.author-img').append(a);
+  document.querySelector('.author-img').append(a1);
+
+  document.querySelector('.icon').href = logo;
 });

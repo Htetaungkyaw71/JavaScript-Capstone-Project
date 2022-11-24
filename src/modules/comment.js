@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { fetchDataDeatil, fetchComment, postComment } from './api.js';
-import { counter,cmCount } from './CommentCount.js';
+import { counter, increaseCount } from './CommentCount.js';
 
 const dialog = document.getElementById('dialog');
 
@@ -12,7 +12,6 @@ const yyyy = today.getFullYear();
 if (dd < 10) {
   dd = `0${dd}`;
 }
-
 if (mm < 10) {
   mm = `0${mm}`;
 }
@@ -80,6 +79,8 @@ const renderComment = ({ creation_date, username, comment }) => {
 const closefunc = () => {
   document.querySelectorAll('#close').forEach((btn) => {
     btn.onclick = () => {
+      document.body.style.position = 'absolute';
+      document.querySelector('main').classList.remove('blur');
       dialog.classList.add('hidden');
       document.body.style.overflow = 'scroll';
     };
@@ -99,15 +100,18 @@ const addComment = (id) => {
     };
     postComment(data);
     renderComment({ ...data, creation_date: today });
-    e.target.name.value = '';
-    e.target.insight.value = '';
-    cmCount()
+    form.reset();
+    const index = +document.getElementById('commentCounter').innerHTML;
+    document.getElementById('commentCounter').innerHTML = increaseCount(index);
   };
 };
 
 export default () => {
   document.querySelectorAll('.btn').forEach((btn) => {
     btn.onclick = () => {
+      document.body.style.position = 'fixed';
+      document.querySelector('main').classList.add('blur');
+      document.querySelector('main').style.background = 'rgb(193,199,208,0.5)';
       dialog.classList.remove('hidden');
       dialog.innerHTML = '';
       fetchDataDeatil(btn.id).then((data) => {
@@ -118,10 +122,10 @@ export default () => {
         fetchComment(btn.id).then((data) => {
           if (data) {
             data.forEach((item) => renderComment(item));
-            counter(data)
+            document.getElementById('commentCounter').innerHTML = counter(data);
           } else {
             document.querySelector('.commentList').innerHTML = '<li>No Comments</li>';
-            counter(null)
+            document.getElementById('commentCounter').innerHTML = counter(data);
           }
         });
       });
