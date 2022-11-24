@@ -26,7 +26,6 @@ export const postComment = async (data) => {
     headers: {
       'Content-Type': 'application/json',
     },
-
   });
   if (response.status !== 201) {
     return null;
