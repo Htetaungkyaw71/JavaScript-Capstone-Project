@@ -77,9 +77,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[like item]**
+- **[comment item]**
+- **[view detail of the item]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,77 +101,48 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need: Code editor, web browser and npm
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:Htetaungkyaw71/JavaScript-Capstone-Project.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
 
 ```sh
   cd my-project
-  gem install
+  npm install
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm start
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  npm run test
 ```
---->
 
-### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,9 +173,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[search functionality]**
+- [ ] **[add animation]**
+- [ ] **[categories functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,7 +185,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Htetaungkyaw71/JavaScript-Capstone-Project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,7 +195,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project, you can give star this repo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
