@@ -57,38 +57,19 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [JavaScript-Capstone-Project] <a name="about-project">Microverse Group Capstone for module 2</a>
 
-> Describe your project in 1 or 2 sentences.
+**[JavaScript-Capstone-Project]** is a Sea food restaurant webapp built based on an external API that provides data about Meals. We also used the involvement API provided for the comment and likes functionality, where comments on every meal are saved for review with dates and every click on the heart icon displays the number of likes for each meal.
 
-**[your_project__name]** is a...
+## 🛠 Built With 
+<a name="built-with">JavaScript</a>
+<a name="built-with">HTML</a>
+<a name="built-with">CSS</a>
 
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+### Tech Stack
+ <a name="tech-stack">Webpack</a>
+ <a name="tech-stack">Jest</a>
+ <a name="tech-stack">JSON</a>
 
 <!-- Features -->
 
@@ -106,9 +87,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](N/A)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,17 +181,18 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Htetaungkyaw**
 
-👤 **Author2**
+- GitHub: [@github](https://github.com/Htetaungkyaw71)
+- Twitter: [@twitter](https://twitter.com/htetaun91907337)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/htet-aung-kyaw-9a77271a7/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Festus Enning**
+
+- GitHub: [@githubhandle](https://github.com/Enning94)
+- Twitter: [@twitterhandle](https://twitter.com/nana_akyerefi)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/enning-festus)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

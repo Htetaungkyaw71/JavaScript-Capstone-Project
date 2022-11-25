@@ -20,7 +20,7 @@ const renderContent = (item) => {
   <div class="fname-likes">
       <h2>${item.strMeal}</h2>
      <span class="likes">
-     <p class= "num-likes" id = "likes${item.idMeal}" > </p>
+     <p class= "num-likes" id = "likes${item.idMeal}"> </p>
       <button class="like-btn" id= "${item.idMeal}">
       <i class="fa-regular fa-heart"></i>
       </button>  
@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     .then((response) => {
       const data = response.meals;
       const list = data.slice(1, 7);
-      dispCounter(list.length);
+      const movieUpdate = document.getElementById('menu-count');
+      movieUpdate.innerHTML = `Menu(${dispCounter(list)})`;
 
       list.forEach((item) => {
         renderContent(item);
