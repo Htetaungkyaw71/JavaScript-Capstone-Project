@@ -83,6 +83,20 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Kanban board
+
+- [ Kanban board link](https://github.com/Htetaungkyaw71/JavaScript-Capstone-Project/projects/1)
+
+## Team members
+
+- [Htetaungkyaw](https://github.com/Htetaungkyaw71)
+- [Festus Enning](https://github.com/Enning94)
+
+## Pull requests with code reviews that I am the proudest of
+
+- [ Pull request link](https://github.com/Htetaungkyaw71/JavaScript-Capstone-Project/pull/26)
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
