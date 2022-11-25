@@ -1,5 +1,8 @@
-const dispCounter = (count) => {
-  const movieUpdate = document.getElementById('menu-count');
-  movieUpdate.innerHTML = `Menu(${count})`;
+const dispCounter = (list) => {
+  if (list) {
+    return list.length;
+  }
+  return 0;
 };
+
 export default dispCounter;
