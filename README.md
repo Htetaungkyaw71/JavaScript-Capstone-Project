@@ -57,38 +57,19 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [JavaScript-Capstone-Project] <a name="about-project">Microverse Group Capstone for module 2</a>
 
-> Describe your project in 1 or 2 sentences.
+**[JavaScript-Capstone-Project]** is a Sea food restaurant webapp built based on an external API that provides data about Meals. We also used the involvement API provided for the comment and likes functionality, where comments on every meal are saved for review with dates and every click on the heart icon displays the number of likes for each meal.
 
-**[your_project__name]** is a...
+## 🛠 Built With 
+<a name="built-with">JavaScript</a>
+<a name="built-with">HTML</a>
+<a name="built-with">CSS</a>
 
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+### Tech Stack
+ <a name="tech-stack">Webpack</a>
+ <a name="tech-stack">Jest</a>
+ <a name="tech-stack">JSON</a>
 
 <!-- Features -->
 
@@ -96,9 +77,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[like item]**
+- **[comment item]**
+- **[view detail of the item]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,9 +87,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://htetaungkyaw71.github.io/JavaScript-Capstone-Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,77 +101,48 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need: Code editor, web browser and npm
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:Htetaungkyaw71/JavaScript-Capstone-Project.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
 
 ```sh
   cd my-project
-  gem install
+  npm install
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm start
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  npm run test
 ```
---->
 
-### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,17 +152,18 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Htetaungkyaw**
 
-👤 **Author2**
+- GitHub: [@github](https://github.com/Htetaungkyaw71)
+- Twitter: [@twitter](https://twitter.com/htetaun91907337)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/htet-aung-kyaw-9a77271a7/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Festus Enning**
+
+- GitHub: [@githubhandle](https://github.com/Enning94)
+- Twitter: [@twitterhandle](https://twitter.com/nana_akyerefi)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/enning-festus)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,9 +173,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[search functionality]**
+- [ ] **[add animation]**
+- [ ] **[categories functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,7 +185,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Htetaungkyaw71/JavaScript-Capstone-Project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -244,7 +195,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project, you can give star this repo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
